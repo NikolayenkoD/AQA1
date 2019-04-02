@@ -6,9 +6,9 @@ public class Main {
     public static void main(String... arg) {
 
         Scanner in = new Scanner(System.in);
-        System.out.println("Ведите колличество конфет : ");
+        System.out.println("Введите колличество конфет : ");
         int k = in.nextInt();
-        System.out.println("Ведите курс обмена :  ");
+        System.out.println("Введите курс обмена :  ");
         int c = in.nextInt();
 
         int h = 0;// фантики
@@ -22,6 +22,6 @@ public class Main {
 
         }
         System.out.println(k + " сожрали");
-        System.out.println(b + " остаток фантиков");
+        System.out.println(b + " фантик остался");
     }
 }
