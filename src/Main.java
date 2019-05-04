@@ -1,27 +1,26 @@
-import java.util.Scanner;
-
 public class Main {
 
+    public static void main(String[] args) {
+        double [] myList = {1.9, 2.9, 3.4, 3.5};
 
-    public static void main(String... arg) {
-
-        Scanner in = new Scanner(System.in);
-        System.out.println("Введите колличество конфет : ");
-        int k = in.nextInt();
-        System.out.println("Введите курс обмена :  ");
-        int c = in.nextInt();
-
-        int h = 0;// фантики
-        int b = k; //всего фантиков
-
-        while (b >= c)
-        {
-            h = b % c;
-            k = k + b/c;
-            b = b / c + h;
-
+        // Вывести на экран все элементы массива
+        for (int i = 0; i < myList.length; i++) {
+            System.out.println(myList[i] + " ");
         }
-        System.out.println(k + " сожрали");
-        System.out.println(b + " фантик остался");
+        // Сумма элементов массива
+        double total = 0;
+        for (int i = 0; i < myList.length; i++) {
+            total += myList[i];
+        }
+        System.out.println("Сумма чисел массива: " + total);
+        // Нахождение среди элементов массива наибольшего
+        double max = myList[0];
+        for (int i = 1; i < myList.length; i++) {
+            if (myList[i] > max) max = myList[i];
+        }
+        System.out.println("Наибольший элемент: " + max);
+        // Нахождение среднего арифмитического массива
+        double sred = total / myList.length;
+        System.out.println("Среднее арифмитическое: " + sred);
     }
 }
